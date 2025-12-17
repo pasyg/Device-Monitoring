@@ -26,7 +26,7 @@ dotnet run
 To run the frontend from `./DeviceMonitoring/frontend/react`:
 
 ```bash
-npm install<br>
+npm install
 npm run dev
 ```
 
