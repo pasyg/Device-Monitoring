@@ -53,7 +53,7 @@ source /llm/bin/activate
 And install the necessary requirements:
 
 <code bash>
-pip install requirements.txt
+pip install -r requirements.txt
 </code>
 
 Then run via:
