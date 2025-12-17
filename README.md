@@ -8,9 +8,9 @@ This project combines an API for collecting and viewing data from different devi
 Create a free Gemini API key under <link>https://aistudio.google.com/app/api-keys</link>, add an environment file in ```/llm/.env``` and add ``GEMINI_API_KEY=<insert API KEY>`` to work with the LLM.
 
 Clone the repository:
-<code bash>
+```bash
 https://github.com/pasyg/Device-Monitoring.git
-</code>
+```
 Then ``cd Device-Monitoring/`` into it.
 
 ## Linux
@@ -18,82 +18,82 @@ Then ``cd Device-Monitoring/`` into it.
 ### Backend
 To run the backend from `./DeviceMonitoring/backend/device_api`:
 
-<code bash>
+```bash
 dotnet run
-</code>
+```
 
 ### Frontend
 To run the frontend from `./DeviceMonitoring/frontend/react`:
 
-<code bash>
+```bash
 npm install<br>
 npm run dev
-</code>
+```
 
 Then access on:
 
-<code>
+```>
 http://localhost:5173/
-</code>
+```
 
 
 ### LLM Assistance
 To activate the LLM assistance from ``./DeviceMonitoring/llm`` , first make sure python 3.12 or newer, aswell as ``venv`` are installed. Create a new virtual environment:
 
-<code bash>
+```bash
 python -m venv /llm/
-</code>
+```
 
 Activate the virtual environment:
 
-<code>
+```bash>
 source /llm/bin/activate
-</code>
+```
 
 And install the necessary requirements:
 
-<code bash>
+```bash
 pip install -r requirements.txt
-</code>
+```
 
 Then run via:
 
-<code bash>
+```bash
 uvicorn main:app --port 8000
-</code>
+```
 
 ### Mock data
 To generate mock data to fill the database, go to:
 
-<code bash>
+```bash
 ./test/deviceswim/
-</code>
+```
 
 and run the simulator:
 
-<code bash>
+```bash
 python device_sim.py
-</code>
+```
 
 
 ## Docker
 To run the code within a Docker container, simply build:
 
-<code bash>
+```bash
 docker compose build
-</code>
+```
 
 and run:
 
-<code bash>
+```bash
 docker compose up
-</code>
+```
 
 Then access on:
 
-<code>
+```>
 http://localhost:5173/
-</code>
+```
 
 # More to come
 - More, different LLMs
