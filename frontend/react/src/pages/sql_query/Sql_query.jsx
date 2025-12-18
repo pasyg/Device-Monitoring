@@ -1,10 +1,11 @@
 import { useState } from "react";
+import SqlResultTable from "./sql_table";
 
 function SqlQuery() {
     const [text, setText] = useState("");
     const [response, setResponse] = useState("");
-
-    console.log("SqlLLL2");
+    const [query, setQuery] = useState("");
+    const [result, setResult] = useState("");
 
     const API_LLM = import.meta.env.VITE_LLM_URL;
     const API_BACKEND = import.meta.env.VITE_BACKEND_URL;
@@ -20,13 +21,13 @@ function SqlQuery() {
             });
   
             const data = await response.json();
-            var output = 'Final query:\n' + data.query + "\n\n" + 'Executed:\n' + data.sql_execute
-            setResponse(output);
+            setQuery("Executed query:\n" + data.query);
+            setResult(data.sql_execute);
         } catch (err) {
             console.error(err);
         }
     };
-
+    
     return (
         <div>
             <textarea
@@ -45,11 +46,12 @@ function SqlQuery() {
                 </button>
             </div>
             <textarea
-                value={response}
-                className="w-3/4 h-80 p-4 bg-white text-black rounded-xl border-2 resize-none mt-16"
+                value={query}
+                className="w-3/4 h-24 p-4 bg-white text-black rounded-xl border-2 resize-none mt-16"
                 readOnly
-                placeholder="LLM Response"
+                placeholder="LLM Query"
             />
+            <SqlResultTable results={result}/>
         </div>
     );
 }
