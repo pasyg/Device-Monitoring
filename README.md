@@ -5,7 +5,7 @@ This project combines an API for collecting and viewing data from different devi
 
 # How to Run
 ## ! Important !
-Create a free Gemini API key under <link>https://aistudio.google.com/app/api-keys</link>, add an environment file in ```/llm/.env``` and add ``GEMINI_API_KEY=<insert API KEY>`` to work with the LLM.
+Create a free Gemini API key under <link>https://aistudio.google.com/app/api-keys</link>, add an environment file in ```/llm/.env``` and add ``GEMINI_API_KEY=<insert API KEY>`` to work with the LLM. To run without a LLM call, comment out ``query = llm_client.generate_sql_query(user_prompt)`` in ``llm/main.py`` and uncomment ``query = "SELECT * FROM Devices;``.
 
 Clone the repository:
 ```bash
