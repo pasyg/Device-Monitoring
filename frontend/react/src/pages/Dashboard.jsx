@@ -1,3 +1,5 @@
-export default function Dashboard() {
-  return <div>Dashboard Content</div>;
-}
+function Dashboard() {
+    return "In Development!";
+};
+
+export default Dashboard;

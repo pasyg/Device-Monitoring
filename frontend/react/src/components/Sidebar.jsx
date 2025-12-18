@@ -19,10 +19,10 @@ export default function Sidebar() {
             <a href="/sqlquery" className="hover:bg-gray-500 p-2 rounded cursor-pointer text-xs indent-4">
             SQL Query</a>
 
-            <a href="/dataquest" className="hover:bg-gray-500 p-2 rounded cursor-pointer text-xs indent-4">
+            <a href="/dataquestion" className="hover:bg-gray-500 p-2 rounded cursor-pointer text-xs indent-4">
             Data Question</a>
 
-            <a href="/anomalydetect" className="hover:bg-gray-500 p-2 rounded cursor-pointer text-xs indent-4">
+            <a href="/anomalydetection" className="hover:bg-gray-500 p-2 rounded cursor-pointer text-xs indent-4">
             Anomaly Detection</a>
 
             <a href="/reports" className="hover:bg-gray-500 p-2 rounded cursor-pointer">
