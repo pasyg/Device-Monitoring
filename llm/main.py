@@ -30,7 +30,7 @@ class Message(BaseModel):
 #   "data_question"
 #   "anomaly_detection"
 
-default_db_path = "../backend/DeviceApi/devicemonitor.db"
+default_db_path = "../backend/device_api/devicemonitor.db"
 db_path = os.getenv("DB_PATH", default_db_path)
 absolute_db_path = Path(db_path).resolve()
 
@@ -38,6 +38,7 @@ absolute_db_path = Path(db_path).resolve()
 def run_sql_query(data: Message):
     user_prompt = data.message # User Input Prompt
     print(f"Received query: {data.message}\n\n")
+    print(f"{absolute_db_path}\n\n")
 
     # Set up VectorDB 
     db_client, db_collection = setup_chroma()
@@ -57,8 +58,8 @@ def run_sql_query(data: Message):
     llm_client.change_dbcontext(retrieved_schema)
     
     # Generate full SQL Query
-    # query = llm_client.generate_sql_query(user_prompt)
-    query = "SELECT * FROM Devices;"
+    query = llm_client.generate_sql_query(user_prompt)
+    # query = "SELECT * FROM Devices;"
     print(f"Generated query: {query}\n\n")
     # Execute the query on the database
     sql_execute = execute_query(absolute_db_path, query)
