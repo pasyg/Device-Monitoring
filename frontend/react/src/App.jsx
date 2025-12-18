@@ -2,7 +2,7 @@ import MainLayout from "./components/MainLayout";
 import { useEffect, useState } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import SqlQuery from "./pages/Sql_query";
+import SqlQuery from "./pages/sql_query/Sql_query";
 import HomePage from "./pages/Homepage";
 
 export default function App() {
