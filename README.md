@@ -95,6 +95,14 @@ Then access on:
 http://localhost:5173/
 ```
 
+# Features
+
+## SQL Query
+To use the SQL Query feature, simply add a question in the upper textbox and click the button "Send Query". After that, the box below will show the generated SQL Query and the resulting table will be shown below, as can be seen in the image.
+![](/img/sql_query.png)
+
+
+
 # More to come
 - More, different LLMs
 -  Logging system (for device malfunctioning, anomaly detection, etc....)
